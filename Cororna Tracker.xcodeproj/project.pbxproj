@@ -14,6 +14,7 @@
 		1172EAC02689CAB500CA8619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1172EABF2689CAB500CA8619 /* Assets.xcassets */; };
 		1172EAC32689CAB500CA8619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1172EAC12689CAB500CA8619 /* LaunchScreen.storyboard */; };
 		1172EACB2689DA7400CA8619 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172EACA2689DA7400CA8619 /* FilterViewController.swift */; };
+		1172EACD2689E49200CA8619 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172EACC2689E49200CA8619 /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1172EAC22689CAB500CA8619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1172EAC42689CAB500CA8619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1172EACA2689DA7400CA8619 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		1172EACC2689E49200CA8619 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1172EABF2689CAB500CA8619 /* Assets.xcassets */,
 				1172EAC12689CAB500CA8619 /* LaunchScreen.storyboard */,
 				1172EAC42689CAB500CA8619 /* Info.plist */,
+				1172EACC2689E49200CA8619 /* APICaller.swift */,
 			);
 			path = "Cororna Tracker";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				1172EABB2689CAB300CA8619 /* ViewController.swift in Sources */,
 				1172EAB72689CAB300CA8619 /* AppDelegate.swift in Sources */,
 				1172EACB2689DA7400CA8619 /* FilterViewController.swift in Sources */,
+				1172EACD2689E49200CA8619 /* APICaller.swift in Sources */,
 				1172EAB92689CAB300CA8619 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
