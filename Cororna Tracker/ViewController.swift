@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                 }
         }()
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: title,
+            title: buttonTitle,
             style: .done,
             target: self,
             action: #selector(didTapFilter))
