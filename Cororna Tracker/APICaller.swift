@@ -10,7 +10,7 @@ import Foundation
 class APICaller{
     static let shared = APICaller()
     
-    private init() {}
+    private init(){}
     
     private struct Constants{
         static let allStatesUrl = URL(string: "https://api.covidtracking.com/v2/states.json")
@@ -21,42 +21,41 @@ class APICaller{
         case state(State)
     }
     
-    public func getCovidData(for scope: DataScope,
-                             completion: @escaping (Result<String, Error>) -> Void
-    ) {
-        
+    public func getCovidData(
+        for scope: DataScope,
+        complition: @escaping (Result<String, Error>) -> Void){
         
     }
     
-    public func getStateList(
-        completion: @escaping (Result<[State], Error>) -> Void
-    ){
+    public func getStateList(complition: @escaping (Result<[State], Error>) -> Void){
         guard let url = Constants.allStatesUrl else {
             return
         }
-        let task = URLSession.shared.dataTask(with: url){data, _, error in
-            guard let data = data, error == nil else{return}
+        let task = URLSession.shared.dataTask(with: url){
+            data, _, error in
+            guard let data = data, error == nil else { return }
             
             do{
-                let result = try JSONDecoder().decode(StateListResponce.self, from: data)
+                let result = try JSONDecoder().decode(StateListResponse.self, from: data)
                 let states = result.data
-                completion(.success(states))
+                complition(.success(states))
+            } catch{
+                complition(.failure(error))
             }
-            catch{
-                completion(.failure(error))
-            }
-            
         }
+        
         task.resume()
     }
-    
 }
 
-struct StateListResponce: Codable {
+struct StateListResponse: Codable {
     let data: [State]
 }
+
 
 struct State: Codable {
     let name: String
     let state_code: String
 }
+
+

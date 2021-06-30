@@ -8,8 +8,9 @@
 import UIKit
 
 class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
-    public var completion: ((State) -> Void)?
+   
+    
+    public var complition: ((State) -> Void)?
     
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -22,7 +23,6 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
         }
     }
     
@@ -37,20 +37,19 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close,
                                                            target: self,
                                                            action: #selector(didTapClose))
-        
     }
     
-    override func viewDidLayoutSubviews(){
+    override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
     
-    @objc private func didTapClose(){
+    @objc private func didTapClose (){
         dismiss(animated: true, completion: nil)
     }
     
     private func fetchStates(){
-        APICaller.shared.getStateList{ [weak self] result in
+        APICaller.shared.getStateList { [weak self] result in
             switch result {
             case .success(let states):
                 self?.states = states
@@ -59,16 +58,14 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
-   
-
-    func tableView(_ tableVIew: UITableView, numberOfRowsInSection section: Int) -> Int{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return states.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let state = states[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
-                                                 for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = state.name
         return cell
     }
@@ -76,7 +73,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let state = states[indexPath.row]
-        completion?(state)
+        complition?(state)
         dismiss(animated: true, completion: nil)
     }
 }

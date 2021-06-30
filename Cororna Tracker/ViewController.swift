@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       title = "Covid Cases"
+        title = "Covid Cases"
         createFilterButton()
     }
 
@@ -25,20 +25,21 @@ class ViewController: UIViewController {
             switch scope {
             case .national: return "National"
             case .state(let state): return state.name
-                }
+            }
         }()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: buttonTitle,
-            style: .done,
-            target: self,
-            action: #selector(didTapFilter))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: buttonTitle,
+                                                            style: .done,
+                                                            target: self,
+                                                            action: #selector(didTapFilter))
     }
-
+    
     @objc private func didTapFilter(){
         let vc = FilterViewController()
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
     }
-    
 }
+
+
 
