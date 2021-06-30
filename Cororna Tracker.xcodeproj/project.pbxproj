@@ -15,6 +15,7 @@
 		1172EAC32689CAB500CA8619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1172EAC12689CAB500CA8619 /* LaunchScreen.storyboard */; };
 		1172EACB2689DA7400CA8619 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172EACA2689DA7400CA8619 /* FilterViewController.swift */; };
 		1172EACD2689E49200CA8619 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1172EACC2689E49200CA8619 /* APICaller.swift */; };
+		860539409889204B6D9346C3 /* Pods_Cororna_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB9AA89D7A8773778628D21 /* Pods_Cororna_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		1172EAC42689CAB500CA8619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1172EACA2689DA7400CA8619 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		1172EACC2689E49200CA8619 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		6C476F7B88F726707C0B1ADD /* Pods-Cororna Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cororna Tracker.release.xcconfig"; path = "Target Support Files/Pods-Cororna Tracker/Pods-Cororna Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		BCB5AB140FA66100E3100179 /* Pods-Cororna Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cororna Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Cororna Tracker/Pods-Cororna Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		DFB9AA89D7A8773778628D21 /* Pods_Cororna_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cororna_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860539409889204B6D9346C3 /* Pods_Cororna_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				1172EAB52689CAB300CA8619 /* Cororna Tracker */,
 				1172EAB42689CAB300CA8619 /* Products */,
+				C577A2FC632D2D94BA4B1C7E /* Pods */,
+				F99238E6CFF3968501E259CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,24 @@
 			path = "Cororna Tracker";
 			sourceTree = "<group>";
 		};
+		C577A2FC632D2D94BA4B1C7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCB5AB140FA66100E3100179 /* Pods-Cororna Tracker.debug.xcconfig */,
+				6C476F7B88F726707C0B1ADD /* Pods-Cororna Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F99238E6CFF3968501E259CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFB9AA89D7A8773778628D21 /* Pods_Cororna_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1172EAC72689CAB500CA8619 /* Build configuration list for PBXNativeTarget "Cororna Tracker" */;
 			buildPhases = (
+				8753349136ACFBC8E05EF265 /* [CP] Check Pods Manifest.lock */,
 				1172EAAF2689CAB300CA8619 /* Sources */,
 				1172EAB02689CAB300CA8619 /* Frameworks */,
 				1172EAB12689CAB300CA8619 /* Resources */,
+				C509D78CFFDBB03D9031702F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -117,7 +144,7 @@
 			);
 			mainGroup = 1172EAAA2689CAB300CA8619;
 			packageReferences = (
-				1172EACE268CA07B00CA8619 /* XCRemoteSwiftPackageReference "Charts" */,
+				1172EACE268CA07B00CA8619 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 1172EAB42689CAB300CA8619 /* Products */;
 			projectDirPath = "";
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8753349136ACFBC8E05EF265 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cororna Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C509D78CFFDBB03D9031702F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cororna Tracker/Pods-Cororna Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cororna Tracker/Pods-Cororna Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cororna Tracker/Pods-Cororna Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1172EAAF2689CAB300CA8619 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		1172EAC82689CAB500CA8619 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB5AB140FA66100E3100179 /* Pods-Cororna Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +383,7 @@
 		};
 		1172EAC92689CAB500CA8619 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C476F7B88F726707C0B1ADD /* Pods-Cororna Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,7 +425,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1172EACE268CA07B00CA8619 /* XCRemoteSwiftPackageReference "Charts" */ = {
+		1172EACE268CA07B00CA8619 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts";
 			requirement = {

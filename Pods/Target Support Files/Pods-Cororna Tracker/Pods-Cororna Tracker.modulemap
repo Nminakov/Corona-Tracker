@@ -1,0 +1,6 @@
+framework module Pods_Cororna_Tracker {
+  umbrella header "Pods-Cororna Tracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
