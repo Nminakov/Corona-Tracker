@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -116,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1172EAAA2689CAB300CA8619;
+			packageReferences = (
+				1172EACE268CA07B00CA8619 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 1172EAB42689CAB300CA8619 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +352,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1172EACE268CA07B00CA8619 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 1172EAAB2689CAB300CA8619 /* Project object */;
 }
